@@ -29,7 +29,7 @@ def calculate_reward(node, initial_node) -> float:
 
 states = ['A', 'B', 'C']
 actions = [0, 1]
-transitions = [['A', 0, 'A'], ['A', 1, 'B'], ['A', 1, 'C'], ['B', 0, 'C'], ['B', 1, 'C'], ['C', 1, 'C']]
+transitions = [['A', 'A', 0], ['A', 'B', 1], ['A', 'C', 1], ['B', 'C', 0], ['B', 'C', 1], ['C', 'C', 1]]
 # Define the file's name.
 '''
 filename = r""

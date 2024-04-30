@@ -19,9 +19,9 @@ class qNode:
         new_states = []
 
         for transition in self.transitions:
-            if transition[0] in [state.get_value() for state in self.states] and transition[2] == action:
+            if transition[0] in [state.get_value() for state in self.states] and transition[1] == action:
                 for state in self.possible_states:
-                    if transition[1] == state.get_value():
+                    if transition[2] == state.get_value():
                         new_states.append(state)
         return qNode(new_states, self.transitions, self.actions, self.possible_actions, self, self.possible_states)
 
@@ -32,9 +32,9 @@ class qNode:
         actions = list(self.actions)
         actions.append(action)
         for transition in self.transitions:
-            if transition[0] in [state.get_value() for state in self.states] and transition[2] == action:
+            if transition[0] in [state.get_value() for state in self.states] and transition[1] == action:
                 for state in self.possible_states:
-                    if transition[1] == state.get_value():
+                    if transition[2] == state.get_value():
                         new_states.append(state)
         return qNode(new_states, self.transitions, actions, self.possible_actions, self, self.possible_states)
 
