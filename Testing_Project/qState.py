@@ -15,7 +15,7 @@ class qState:
     def set_actions(self):
         actions = set()
         for transition in self.transitions:
-            actions.add(transition[1])
+            actions.add(transition[2])
         self.action = actions
 
     def get_actions(self):
